@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 2rem 7rem;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 2.3rem 0;
+}
+
+.logo {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    margin-inline: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1.2vw;
+    line-height: 2;
+    transition: all 300ms ease;
+}
+
+.logo:hover,
+nav ul li a:hover {
+    color: rgb(255, 140, 0);
+}
+
+#click {
+    display: none;
+}
+
+.menu-btn i {
+    display: none;
+    font-size: 4vw;
+    line-height: 1.2;
+    position: absolute;
+    right: 15%;
+}
+/* main */
+main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/* Article */
+article {
+    width: 60%;
+}
+
+article img {
+    width: 100%;
+    height: 45vh;
+    padding-bottom: 2rem;
+}
+
+.article-card {
+    display: flex;
+}
+
+.article-card_title {
+    text-transform: uppercase;
+    width: 50%;
+    font-size: 3vw;
+}
+
+.article-card-inside {
+    width: 45%;
+    margin-inline: 5%;
+}
+.article-card-inside p{
+    color: rgb(69, 69, 158);
+    font-size: 1vw;
+}
+.article-card-inside a {
+    text-decoration: none;
+    padding: .4rem 2rem;
+    background-color: red;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 4.5;
+    transition: all 300ms ease;
+    border: 1px solid transparent;
+    font-size: 1vw;
+}
+.article-card-inside a:hover{
+    color: red;
+    border-color: red;
+    background-color: white;
+}
+.article-card-inside a:active {
+    color: white;
+    background-color: red;
+}
+/* aside */
+aside{
+    width: 35%;
+    height: auto;
+    background-color: rgb(9, 9, 122);
+    padding: 1.2rem;
+}
+/* responsive */
+@media(max-width: 600px) {
+    .menu-btn i {
+        display: block;
+    }
+
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+
+    nav ul {
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        background-color: #111;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    #click:checked~nav ul {
+        left: 0%;
+    }
+
+    nav ul li {
+        margin: 40px 0;
+    }
+
+    nav ul li a {
+        font-size: 5vw;
+        display: block;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus {
+        color: cyan;
+        background-color: none;
+    }
+
+    #click:checked~body {
+        overflow: hidden;
+    }
+}
