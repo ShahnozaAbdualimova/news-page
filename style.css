@@ -23,6 +23,11 @@ header {
     cursor: pointer;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: all 300ms ease;
+}
+
+.logo:hover {
+    color: rgb(255, 140, 0);
 }
 
 nav ul {
@@ -55,7 +60,7 @@ nav ul li a:hover {
     font-size: 2rem;
     cursor: pointer;
     /* margin-left: 150px; */
-    
+
 }
 
 /* Main */
@@ -66,12 +71,12 @@ main {
 }
 
 article {
-    width: 65%;
+    width: 60%;
+
 }
 
 article img {
     width: 100%;
-    height: 50%;
     margin-bottom: 1rem;
     border-radius: 8px;
 }
@@ -89,9 +94,11 @@ article img {
     color: #000;
     width: 60%;
 }
-.article-card-inside{
+
+.article-card-inside {
     width: 40%;
 }
+
 .article-card-inside p {
     color: #555;
     margin-bottom: 1rem;
@@ -126,14 +133,14 @@ aside {
     background-color: #111;
     padding: 2rem;
     width: 30%;
-    height: 90vh;
+    height: auto;
     color: white;
     border-radius: 8px;
 }
 
 aside h1 {
     color: rgb(255, 140, 0);
-    font-size: 3vw;
+    font-size: 2.9vw;
     margin-bottom: 1rem;
 }
 
@@ -186,7 +193,7 @@ section {
 
 .news-item img {
     width: 50%;
-    height: auto;
+    /* height: auto; */
 }
 
 .news-item-card {
@@ -210,11 +217,27 @@ section {
     color: #555;
     font-size: 0.9rem;
 }
-aside .item-last{
+
+aside .item-last {
     border: none;
 }
+
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
+    .article-card-inside p {
+        font-size: .9rem;
+    }
+
+    aside .aside-item h5 {
+        font-size: .9rem;
+    }
+
+    aside .aside-item p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 905px) {
 
     main,
     .article-card {
@@ -230,9 +253,11 @@ aside .item-last{
         width: 100%;
         margin-top: 2rem;
     }
+
     .article-card-inside {
         width: 100%;
     }
+
     section {
         grid-template-columns: 1fr;
     }
